@@ -1,7 +1,7 @@
 <?php 
   require_once('koneksi.php');
 
-    $uuid = "e11e4fd6-6091-498c-a383-5627bd9fc1c3";
+    $uuid = "";
     $jabatan = "sekuriti";
     if(isset($_POST['uuid'])) $uuid = $_POST["uuid"];
     if(isset($_POST['jabatan'])) $jabatan = $_POST["jabatan"];
@@ -26,19 +26,29 @@
         $keluar = 0;
         $loading = 8; 
         $batal = 0;
+        $admin = 8;
       } else if($row['jabatan']=="muatan")
       {
         $keluar = 8; 
         $masuk = 8;
         $loading = 0;
         $batal=8;
+        $admin=8;
+      }else if($row['jabatan']=="admin")
+      {
+        $keluar = 0; 
+        $masuk = 0;
+        $loading = 0;
+        $batal = 0;
+        $admin = 0;
       }
       else
       {
         $masuk = 8;
         $keluar = 8;
         $loading = 8; 
-        $batal =8;
+        $batal = 8;
+        $admin = 8;
       }
     }
     else
@@ -55,7 +65,8 @@
         "masuk"=> $masuk,
         "keluar"=> $keluar,
         "loading"=> $loading,
-        "batal"=>$batal
+        "batal"=>$batal,
+        "admin"=>$admin
     ));
     
     echo json_encode(array('result'=>$result));
