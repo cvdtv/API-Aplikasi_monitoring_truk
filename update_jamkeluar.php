@@ -41,7 +41,7 @@
 			}else{
 				$notification = new Notification();
 				$query = "SELECT token from sles where keysales='$OPSALES'";
-				$tokensales = mysqli_fetch_row(mysqli_query($con488, "SELECT token from sales where keysales='$OPSALES'"));
+				$tokensales = mysqli_fetch_row(mysqli_query($con, "SELECT token from sales where keysales='$OPSALES'"));
 
 				$result = $notification->sendFCMSingle("", "", $tokensales[0], $notification->setNotification("Monitoring Truk", "Truk nopol ".$nopol.", Tujuan ".$optj."  sudah ".$str));		
 				echo $sql." - ".$query." - ".$tokensales;		
