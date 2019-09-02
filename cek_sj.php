@@ -17,7 +17,6 @@
 	$optj = "";
 	$cusnama = "";
 
-	if (isset($_POST['nosj'])) $nosj = $_POST['nosj'];
 	if (isset($_POST['flagproses'])) $flagproses = $_POST['flagproses'];
 	
 	if ($flagproses == "batal") {

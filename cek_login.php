@@ -17,6 +17,7 @@
     $keluar = 8;
     $loading = 8; 
     $batal = 8;
+    $laporan = 8;
 
     if ($row==true) {
       

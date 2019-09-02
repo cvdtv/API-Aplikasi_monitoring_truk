@@ -1,6 +1,6 @@
 <?php
 
-	 define('HOST','192.168.4.88');
+	 define('HOST','192.168.5.99');
 	 define('USER','root');
 	 define('PASS','hanyaadminyangtau');
 	 define('DB','c_erp_plant_sigk');
